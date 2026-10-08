@@ -2,77 +2,63 @@ export const profile = {
   name: 'Vinod Kesavan',
   firstName: 'VINOD',
   lastName: 'KESAVAN',
-  role: 'Software Development Engineer',
-  focus: 'Backend Tooling & Microservices',
+  role: 'Software Engineer',
+  focus: 'Backend Platforms & Microservices',
   tagline:
-    'Building test-execution platforms, CI pipelines and developer-automation systems that keep large backends honest.',
+    'I build developer platforms, CI pipelines and microservices that keep large-scale backends honest.',
   email: 'kvnkmoodindigo@gmail.com',
   phone: '+91-9392299240',
   phoneHref: 'tel:+919392299240',
   github: 'GitHub',
   location: 'Bangalore, India',
-  college: "Vignan's Institute of Information Technology",
-  degree: 'B.Tech — Computer Science & Engineering',
-  cgpa: '8.94 / 10',
-  collegeYears: '2020 – 2024',
-  collegeLocation: 'Visakhapatnam, India',
 }
-
-export const coursework = [
-  'Data Structures & Algorithms',
-  'DBMS',
-  'Computer Networks',
-  'Operating Systems',
-  'OOP Concepts',
-  'Web Development',
-]
 
 export interface ExperienceItem {
   company: string
   role: string
   period: string
   location: string
-  color: string
+  shade: string
   points: string[]
 }
 
 export const experience: ExperienceItem[] = [
   {
     company: 'PhonePe',
-    role: 'Software Engineer (Quality) — Backend Tooling & Automation',
+    role: 'Software Engineer — Platform & Backend Engineering',
     period: 'Sep 2025 — Present',
     location: 'Bangalore, India',
-    color: '#68cbcb',
+    shade: '#ffffff',
     points: [
-      'Core backend contributor for AutoTest, PhonePe’s centralized test-execution platform — integrated with GitLab CI to trigger parallel pipelines and aggregate results across 33+ PODs.',
-      'Building the new AutoTest MCP from scratch: core backend APIs for live pipeline status tracking, report data aggregation, and selective failed-test rerun logic.',
-      'Engineered REST CRUD microservices for pipeline configuration, separating test-setup rules into a dedicated schema so bad run history stops breaking future test runs.',
-      'Built a Developer Support Bot backend integrated with Godric (internal LLM Gateway) — RAG + token-based auth over platform docs to automate onboarding and cut manual support requests.',
-      'Authored test suites for new UserService deployments and refactored integration pipelines across UserService and UserMeta, lifting backend stability from an 87% baseline.',
+      'Core backend engineer for AutoTest, PhonePe’s centralized code-verification platform — integrated with GitLab CI to trigger parallel pipelines and aggregate results across 33+ PODs.',
+      'Building the AutoTest MCP from scratch: backend APIs for live pipeline status, report aggregation and selective rerun orchestration — all queryable by AI agents.',
+      'Engineered REST CRUD microservices for pipeline configuration, separating setup rules into a dedicated schema so bad run history stops breaking future executions.',
+      'Built a Developer Support Bot backend on an internal LLM gateway — RAG pipeline with token-based auth over platform docs, automating onboarding and cutting manual support load.',
+      'Owned UserService deployment pipelines and refactored integration flows across UserService and UserMeta, lifting backend reliability from an 87% baseline.',
     ],
   },
   {
     company: 'SenseHQ',
-    role: 'Software Development Engineer (in Test) — Backend Tooling & Automation',
+    role: 'Software Development Engineer — Backend & Platform',
     period: 'Jul 2024 — Aug 2025 · Intern + Full-Time',
     location: 'Bangalore, India',
-    color: '#586596',
+    shade: '#c2c2c2',
     points: [
-      'Served as secondary on-call engineer — triaged production alerts, handled escalation queues, and resolved 30+ high-priority CE (Customer Engineering) tickets.',
+      'Served as secondary on-call engineer — triaged production alerts, handled escalation queues, and resolved 30+ high-priority customer-engineering tickets.',
       'Patched 6 critical bugs in the backend orchestrator service layer handling J2 execution flows, resolving customer-blocking pipeline stalls.',
-      'Built CI/CD pipelines in Jenkins to automate test-suite execution on staging environments ahead of production deployments.',
-      'Built the backend and web automation suite from scratch for J2 services — 150+ integration test scripts, 40+ Cypress suites, and 150+ Endtest flows for release gating.',
+      'Built CI/CD pipelines in Jenkins automating build, deploy and verification flows on staging ahead of production releases.',
+      'Designed and built the service-validation framework for J2 from scratch — 150+ integration scripts, 40+ UI suites and 150+ end-to-end flows as deployment gates.',
     ],
   },
   {
     company: 'TechCurators',
-    role: 'Problem Setter & Reviewer Intern',
+    role: 'Algorithm Problem Author & Reviewer Intern',
     period: 'Mar 2023 — Jun 2023',
     location: 'New Delhi, India',
-    color: '#FFA639',
+    shade: '#9a9a9a',
     points: [
-      'Authored 50+ original programming problems on Data Structures, Algorithms, OOP, and C++ for technical coding assessments.',
-      'Reviewed problem statements, wrote reference solutions in C++ and Java, and verified edge-case test data.',
+      'Authored 50+ original DSA and OOP problems in C++ and Java for large-scale technical assessments.',
+      'Reviewed problem statements, wrote reference solutions, and verified edge-case data for correctness.',
     ],
   },
 ]
@@ -82,80 +68,64 @@ export interface Project {
   subtitle: string
   description: string
   tags: string[]
-  color: string
-  image: string
   imageAlt: string
 }
 
 export const projects: Project[] = [
   {
-    title: 'AutoTest MCP',
-    subtitle: 'PhonePe · Test-Execution Platform',
-    description:
-      'Model-Context-Protocol server for PhonePe’s centralized test execution — live pipeline status, cross-POD report aggregation, and selective rerun of failed tests, all queryable by AI agents.',
-    tags: ['Spring Boot', 'Microservices', 'GitLab CI', 'MCP'],
-    color: '#68cbcb',
-    image: '/src/assets/project-autotest.jpg',
-    imageAlt: 'Visualization of parallel test pipeline lanes',
-  },
-  {
-    title: 'Developer Support Bot',
-    subtitle: 'PhonePe · RAG over Platform Docs',
-    description:
-      'Backend for an internal support bot wired into Godric, PhonePe’s LLM gateway — token-based auth, retrieval-augmented answers over platform documentation, and automated onboarding flows.',
-    tags: ['LLM Gateway', 'RAG', 'REST APIs', 'Auth'],
-    color: '#FFA639',
-    image: '/src/assets/project-bot.jpg',
-    imageAlt: 'AI assistant with orbiting knowledge panels',
-  },
-  {
     title: 'Expense Tracker',
-    subtitle: 'Personal · Microservices App',
+    subtitle: 'Personal · Full-Stack Microservices App',
     description:
-      'Full-stack expense tracker with a React Native mobile app and Spring Boot microservices backend — API Gateway with JWT auth routing traffic across services, containerized with Docker and deployed to AWS via CI/CD.',
-    tags: ['React Native', 'Spring Boot', 'AWS', 'Docker'],
-    color: '#586596',
-    image: '/src/assets/project-expense.jpg',
-    imageAlt: 'Fintech dashboard in 3D space',
+      'Full-stack expense tracker with a React Native mobile app and a Spring Boot microservices backend — an API Gateway with JWT auth routing traffic across services, containerized with Docker and deployed to AWS through CI/CD pipelines.',
+    tags: ['React Native', 'Spring Boot', 'AWS', 'Docker', 'JWT', 'CI/CD'],
+    imageAlt: 'Fintech dashboard rendered in monochrome 3D space',
   },
 ]
 
 export interface SkillGroup {
   label: string
-  color: string
+  shade: string
   items: string[]
 }
 
 export const skillGroups: SkillGroup[] = [
   {
     label: 'Languages',
-    color: '#68cbcb',
+    shade: '#ffffff',
     items: ['Java', 'C++', 'Python', 'C', 'JavaScript', 'SQL'],
   },
   {
     label: 'Backend & Frameworks',
-    color: '#586596',
+    shade: '#c2c2c2',
     items: ['Spring Boot', 'Microservices', 'REST APIs', 'Spring Cloud', 'PostgreSQL', 'ReactJS'],
   },
   {
-    label: 'DevOps, Testing & Tools',
-    color: '#FFA639',
-    items: ['Git', 'Linux', 'GitLab CI', 'Jenkins', 'Docker', 'AWS', 'Cypress', 'Endtest', 'Postman'],
+    label: 'DevOps & Tools',
+    shade: '#9a9a9a',
+    items: ['Git', 'Linux', 'GitLab CI', 'Jenkins', 'Docker', 'AWS', 'Postman'],
   },
 ]
 
 export const codingProfiles = [
-  { platform: 'LeetCode', metric: 'Knight', note: 'Contest rating tier', color: '#68cbcb' },
-  { platform: 'CodeChef', metric: '1677', note: 'Highest rating', color: '#FFA639' },
-  { platform: 'HackerEarth', metric: 'Elite', note: 'Problem-solving tier', color: '#586596' },
-  { platform: 'HackerRank', metric: '33,569', note: 'Hackos earned', color: '#d14444' },
+  { platform: 'LeetCode', metric: 'Knight', note: 'Contest rating tier' },
+  { platform: 'HackerEarth', metric: 'Elite', note: 'Problem-solving tier' },
+  { platform: 'HackerRank', metric: '33,569', note: 'Hackos earned' },
 ]
 
 export const heroStats = [
   { value: '33+', label: 'PODs orchestrated' },
   { value: '150+', label: 'Integration scripts' },
-  { value: '3', label: 'Companies shipped at' },
-  { value: '8.94', label: 'CGPA · B.Tech CSE' },
+  { value: '6', label: 'Critical bugs patched' },
+  { value: '50+', label: 'DSA problems authored' },
+]
+
+export const terminalCard = [
+  { key: 'role', value: 'Software Engineer' },
+  { key: 'edu', value: 'B.Tech CSE · 2024 passout' },
+  { key: 'stack', value: 'Java · Spring Boot · Microservices' },
+  { key: 'ships', value: 'CI pipelines, developer platforms, REST APIs' },
+  { key: 'location', value: 'Bangalore, India' },
+  { key: 'status', value: 'Building developer platforms @ PhonePe' },
 ]
 
 export const marqueeSkills = [
@@ -169,9 +139,9 @@ export const marqueeSkills = [
   'GITLAB CI',
   'JENKINS',
   'POSTGRESQL',
-  'CYPRESS',
   'REACT',
   'PYTHON',
   'LINUX',
   'SYSTEM DESIGN',
+  'MCP',
 ]
